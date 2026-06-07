@@ -72,6 +72,5 @@ tidy.data <- all.df2 %>%
   summarise(across(everything(), mean))
 
 
-# Export cleaned dataset
-write.csv(tidy.data, "tidydata.csv", row.names = FALSE)
-
+# Export cleaned dataset as .txt file
+write.table(tidy.data, file = "tidydata.txt", row.names = FALSE)
